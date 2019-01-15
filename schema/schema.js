@@ -18,6 +18,17 @@ const schema = gql`
     category: Category!
   }
 
+  type BillHistory {
+    year: Int!
+    month: Int!
+    value: Int!
+  }
+
+  type CategoryHistory {
+    category: Category
+    history: [BillHistory]
+  }
+
   # The "Query" type is the root of all GraphQL queries.
   # (A "Mutation" type will be covered later on.)
   type Query {
@@ -25,6 +36,8 @@ const schema = gql`
     bill(id: String!): Bill
     categories: [Category]
     category(id: String!): Category
+    billsPerMonth(year: String!, month: String!): [Bill]
+    yearResume(year: String!): [CategoryHistory]
   }
 
   # Book Mutation (addBook)

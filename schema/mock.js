@@ -53,6 +53,36 @@ const BILLS = [
     value: 13450,
     categoryId: '3',
   },
+  {
+    id: '9',
+    date: '1543456800000',
+    value: 20099,
+    categoryId: '1',
+  },
+  {
+    id: '10',
+    date: '1548986400000',
+    value: 70000,
+    categoryId: '1',
+  },
+  {
+    id: '11',
+    date: '1548986400000',
+    value: 250014,
+    categoryId: '2',
+  },
+  {
+    id: '12',
+    date: '1548986400000',
+    value: 45054,
+    categoryId: '3',
+  },
+  {
+    id: '13',
+    date: '1548986400000',
+    value: 23544,
+    categoryId: '3',
+  },
 ];
 
 module.exports = { CATEGORIES, BILLS };
