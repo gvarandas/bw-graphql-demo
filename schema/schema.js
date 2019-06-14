@@ -21,7 +21,6 @@ const schema = gql`
   }
 
   # The "Query" type is the root of all GraphQL queries.
-  # (A "Mutation" type will be covered later on.)
   type Query {
     posts: [Post]
     post(id: String!): Post

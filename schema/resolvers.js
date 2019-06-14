@@ -1,7 +1,6 @@
 let { POSTS, USERS } = require('./mock');
 
 let nextUserId = 4;
-// let nextCategoryId = 4;
 
 const resolvers = {
   Query: {
@@ -21,11 +20,6 @@ const resolvers = {
       USERS.push(newUser);
       return newUser;
     },
-    // addCategory: (root, { name }) => {
-    //   const newCategory = { id: (nextCategoryId++).toString(), name };
-    //   CATEGORIES = CATEGORIES.concat([newCategory]);
-    //   return newCategory;
-    // },
   },
   Post: {
     author: post => {
