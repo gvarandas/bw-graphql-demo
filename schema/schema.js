@@ -5,45 +5,33 @@ const { gql } = require('apollo-server');
 const schema = gql`
   # Comments in GraphQL are defined with the hash (#) symbol.
 
-  type Category {
+  type Post {
+    id: ID!
+    text: String!
+    timestamp: Int!
+    author: User
+  }
+
+  type User {
     id: ID!
     name: String!
-    bills: [Bill]
-  }
-
-  type Bill {
-    id: ID!
-    date: String!
-    value: Int!
-    category: Category!
-  }
-
-  type BillHistory {
-    year: Int!
-    month: Int!
-    value: Int!
-  }
-
-  type CategoryHistory {
-    category: Category
-    history: [BillHistory]
+    handle: String!
+    profilePicture: String!
+    posts: [Post]
   }
 
   # The "Query" type is the root of all GraphQL queries.
   # (A "Mutation" type will be covered later on.)
   type Query {
-    bills: [Bill]
-    bill(id: String!): Bill
-    categories: [Category]
-    category(id: String!): Category
-    billsPerMonth(year: String!, month: String!): [Bill]
-    yearResume(year: String!): [CategoryHistory]
+    posts: [Post]
+    post(id: String!): Post
+    users: [User]
+    user(id: String!): User
   }
 
-  # Book Mutation (addBook)
+  # User Mutation (addUser)
   type Mutation {
-    addBill(date: String!, value: Int!, categoryId: ID!): Bill
-    addCategory(name: String!): Category
+    addUser(name: String!, handle: String!, profilePicture: String!): User
   }
 `;
 

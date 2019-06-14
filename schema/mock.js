@@ -1,88 +1,34 @@
-const CATEGORIES = [
-  { id: '1', name: 'Hydro' },
-  { id: '2', name: 'Rent' },
-  { id: '3', name: 'Presto' },
+const POSTS = [
+  { id: '1', text: 'This is post 1', timestamp: 1560480603323, authorId: '1' },
+  { id: '2', text: 'This is post 2', timestamp: 1560480603323, authorId: '1' },
+  { id: '3', text: 'This is post 3', timestamp: 1560480603323, authorId: '2' },
+  { id: '4', text: 'This is post 4', timestamp: 1560480603323, authorId: '2' },
+  { id: '5', text: 'This is post 5', timestamp: 1560480603323, authorId: '3' },
+  { id: '6', text: 'This is post 6', timestamp: 1560480603323, authorId: '3' },
+  { id: '7', text: 'This is post 7', timestamp: 1560480603323, authorId: '2' },
+  { id: '8', text: 'This is post 8', timestamp: 1560480603323, authorId: '2' },
+  { id: '9', text: 'This is post 9', timestamp: 1560480603323, authorId: '1' },
 ];
 
-const BILLS = [
+const USERS = [
   {
     id: '1',
-    date: '1546308000000',
-    value: 25000,
-    categoryId: '1',
+    name: 'Johnny Author 1',
+    handle: '@author1',
+    profilePicture: 'https://i.imgur.com/0HMoeO2.jpg',
   },
   {
     id: '2',
-    date: '1543629600000',
-    value: 23544,
-    categoryId: '1',
+    name: 'Author 2 McAllister',
+    handle: '@mr_author2',
+    profilePicture: 'https://i.imgur.com/0HMoeO2.jpg',
   },
   {
     id: '3',
-    date: '1546308000000',
-    value: 200000,
-    categoryId: '2',
-  },
-  {
-    id: '4',
-    date: '1546308000000',
-    value: 13450,
-    categoryId: '3',
-  },
-  {
-    id: '5',
-    date: '1543629600000',
-    value: 13450,
-    categoryId: '3',
-  },
-  {
-    id: '6',
-    date: '1543629600000',
-    value: 13450,
-    categoryId: '3',
-  },
-  {
-    id: '7',
-    date: '1543629600000',
-    value: 13450,
-    categoryId: '3',
-  },
-  {
-    id: '8',
-    date: '1543629600000',
-    value: 13450,
-    categoryId: '3',
-  },
-  {
-    id: '9',
-    date: '1543456800000',
-    value: 20099,
-    categoryId: '1',
-  },
-  {
-    id: '10',
-    date: '1548986400000',
-    value: 70000,
-    categoryId: '1',
-  },
-  {
-    id: '11',
-    date: '1548986400000',
-    value: 250014,
-    categoryId: '2',
-  },
-  {
-    id: '12',
-    date: '1548986400000',
-    value: 45054,
-    categoryId: '3',
-  },
-  {
-    id: '13',
-    date: '1548986400000',
-    value: 23544,
-    categoryId: '3',
+    name: 'Doug "Author 3" Yang',
+    handle: '@iamauthor3',
+    profilePicture: 'https://i.imgur.com/0HMoeO2.jpg',
   },
 ];
 
-module.exports = { CATEGORIES, BILLS };
+module.exports = { POSTS, USERS };
